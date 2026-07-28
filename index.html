@@ -1,0 +1,526 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Gaucha - Churrascaria e Pizzaria</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ebe1d3",
+                        "on-primary-container": "#ffcdc7",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#eff4ff",
+                        "secondary-fixed": "#caeada",
+                        "surface": "#f8f9ff",
+                        "primary-fixed": "#ffdad6",
+                        "on-surface-variant": "#5b403d",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#121c2a",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#93000b",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-tertiary-fixed-variant": "#4c463c",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "outline": "#8f6f6c",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#27313f",
+                        "on-tertiary-fixed": "#1f1b13",
+                        "surface-bright": "#f8f9ff",
+                        "secondary": "#486458",
+                        "on-tertiary-container": "#e0d7c9",
+                        "tertiary-fixed-dim": "#cec5b8",
+                        "surface-tint": "#b91c1c",
+                        "surface-container-highest": "#d9e3f6",
+                        "tertiary": "#4b463c",
+                        "inverse-primary": "#ffb4ab",
+                        "on-secondary-container": "#4c695c",
+                        "surface-container-high": "#dee9fc",
+                        "secondary-container": "#c7e7d7",
+                        "primary": "#93000b",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d0dbed",
+                        "background": "#f8f9ff",
+                        "on-secondary-fixed": "#032017",
+                        "primary-container": "#b91c1c",
+                        "tertiary-container": "#645d52",
+                        "secondary-fixed-dim": "#aecebe",
+                        "surface-container": "#e6eeff",
+                        "on-background": "#121c2a",
+                        "on-secondary-fixed-variant": "#304c41",
+                        "outline-variant": "#e4beb9",
+                        "on-primary-fixed": "#410002",
+                        "surface-variant": "#d9e3f6",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "brand-beige": "#F8F4EF",
+                        "brand-cream": "#F0E6D8",
+                        "brand-green": "#1E3A2F",
+                        "brand-charcoal": "#1F2937"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "20px",
+                        "container-max": "1200px",
+                        "lg": "48px",
+                        "margin-mobile": "16px",
+                        "md": "24px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "xs": "4px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Manrope"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Manrope"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-wood-texture {
+            background-color: #F8F4EF;
+            background-image: radial-gradient(circle at 2px 2px, rgba(185, 28, 28, 0.03) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .nav-drawer-transition {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+<link rel="icon" type="image/jpeg" href="https://lh3.googleusercontent.com/aida-public/AB6AXuD7APIDPMPfOMRfNQZsevTi-tthg7rWkvq-g8fobnWfbtpeDEdjtyRRj4XL60T5af276HVf0UFKNVYKRxs5hEvTMLaP1obqIXYUzoGcw4P5SGYl_5THXjzG6sEJPgfZ6awpBpzN33owl3oFSlpBemJslMB68MHxNuTkKM0SCtpJVa7sOHcnh_M_gxQgCSWAGdwAlhVHSgKi7kXF39zyVlcF8t28Q5r8hiCYMiyWqEG4w3F-y0v9Rd564E_bm3g0YUsBUJjkPpyAZf4f" class=""></head>
+<body class="bg-brand-beige text-on-surface selection:bg-primary-container selection:text-white font-body-md overflow-x-hidden">
+<!-- Header Section -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm transition-all duration-300">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-gutter h-20">
+<!-- Brand -->
+<a class="flex items-center gap-3 group" href="#">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary shadow-sm transition-transform duration-300 group-hover:scale-105">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwILTpgcDaOy9KvB9NbYxdnRbgzrqrYNbwLsSi76NpRXqClV89rxBAelbdHzgKz98w7WZLTSW3Lj1WQ8zLQX-bSx3MdcHeDV3E0B2MMLYbG-5JaNqtYnNKs4zbkEmhHZR6ogA-k-hBGSk7_XEGNzbKNNEu8tXdSH7HqyXjCBhRgx1kN6kj1NCGrTrGuv_LjXDkUQkO7x620crjrf5BZudDCxL_nqrGQU8L7sl2-mCtRUydowNmGw1EoZdA7Fd6Q1PRriUYrIb1p5Xc">
+</div>
+<span class="font-display-lg text-headline-md text-primary tracking-tight hidden sm:block">Gaúcha Churrascaria e Pizzaria</span>
+</a>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center gap-base">
+<a class="px-4 py-2 font-label-lg text-label-lg text-primary border-b-2 border-primary font-bold transition-all" href="#inicio">Início</a>
+<a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#cardapio">Cardápio</a>
+<a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#depoimentos">Depoimentos</a>
+<a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#reserva">Reserva</a>
+<a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#contato">Contato</a>
+</div>
+<!-- Action -->
+<div class="flex items-center gap-4">
+<a class="hidden sm:flex items-center gap-2 bg-primary px-6 py-3 rounded-xl text-white font-label-lg text-label-lg hover:bg-primary-container active:scale-95 transition-all shadow-lg shadow-primary/20" href="https://app.rvpedidos.com.br/pizzaria_nossacasa?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio" target="_blank"><span class="material-symbols-outlined text-[18px]">shopping_cart</span>Pedidos Online</a>
+<button class="md:hidden p-2 text-primary hover:bg-primary/5 rounded-lg" id="menu-toggle">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Mobile Drawer -->
+<div class="fixed inset-0 z-[60] invisible" id="mobile-nav">
+<div class="absolute inset-0 bg-brand-charcoal/40 backdrop-blur-sm opacity-0 transition-opacity duration-300" id="nav-overlay"></div>
+<div class="absolute inset-y-0 left-0 w-64 bg-surface shadow-xl -translate-x-full nav-drawer-transition flex flex-col rounded-r-xl" id="nav-drawer">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center">
+<span class="font-headline-md text-headline-md text-primary">Menu</span>
+<button class="p-1 hover:bg-surface-container-high rounded-lg" id="menu-close">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col py-4">
+<a class="flex items-center gap-4 px-6 py-4 bg-primary-container text-on-primary-container font-bold" href="#inicio"><span class="material-symbols-outlined">home</span>Início</a>
+<a class="flex items-center gap-4 px-6 py-4 text-on-surface-variant hover:bg-surface-container-high" href="#cardapio"><span class="material-symbols-outlined">restaurant_menu</span>Cardápio</a>
+<a class="flex items-center gap-4 px-6 py-4 text-on-surface-variant hover:bg-surface-container-high" href="#depoimentos"><span class="material-symbols-outlined">star</span>Depoimentos</a>
+<a class="flex items-center gap-4 px-6 py-4 text-on-surface-variant hover:bg-surface-container-high" href="#reserva"><span class="material-symbols-outlined">event</span>Reserva</a>
+<a class="flex items-center gap-4 px-6 py-4 text-on-surface-variant hover:bg-surface-container-high" href="#contato"><span class="material-symbols-outlined">contact_support</span>Contato</a>
+</div>
+</div>
+</div>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-wood-texture" id="inicio">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8 animate-in fade-in slide-in-from-left duration-700">
+<span class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary/10 text-primary font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                        A melhor experiência de Petrolina
+                    </span>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface leading-tight"><div class="">Tradição em cada espeto e em cada fatia da sua pizza
+                    </div></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Churrasco no ponto e pizzas irresistíveis no coração de Petrolina. Uma jornada gastronômica que une tradição e modernidade.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4"><a class="flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-2xl font-label-lg text-label-lg hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary/25" href="https://app.rvpedidos.com.br/pizzaria_nossacasa?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio" target="_blank"><span class="material-symbols-outlined text-[20px]">shopping_cart</span>Pedidos Online</a>
+<a class="flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-2xl font-label-lg text-label-lg hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary/25" href="http://wa.me/5587981374668" target="_blank">
+                            Fazer Pedido no WhatsApp
+                        </a>
+<a class="flex items-center justify-center gap-2 bg-brand-green text-white px-8 py-4 rounded-2xl font-label-lg text-label-lg hover:bg-opacity-90 active:scale-95 transition-all" href="#reserva">
+                            Fazer Pré-Reserva
+                        </a>
+</div>
+</div>
+<div class="relative group animate-in fade-in slide-in-from-right duration-1000 delay-200">
+<div class="absolute -inset-4 bg-primary/5 rounded-[2rem] blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="relative aspect-square md:aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional high-angle food photograph showing a variety of grilled Brazilian meat skewers perfectly seasoned and steaming, alongside a rustic artisan pizza with melting cheese and fresh basil. The scene is set on a dark wood table with a warm, amber-lit restaurant atmosphere in the background, creating a premium and appetizing visual aesthetic with high contrast and rich textures." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuChhgU12N6q7IEBbv07Ep8w-YY8k9wBqpjSPIMSDZrjVBklsNFnXPCB88RqHl-w7_csewvRB-_OxWIzMC0G4z3HuMj3JJJTLh6WJ71vL0g14efHW3aVkHZhMEVcyGNu1Rws82hZzt9_XiVnrUwdYeQTYuHdxdO7Pxkfj0o-6FwuNpm-8GtfV6ESZmsXVyJD7M4dc7s6eVuGxY46KWcj1sKTJ1KmGfY7deYlixQfYSb6GYgO7xHwPlkfImQ1ZxysnzzcJjRUsTyJSkNq8Ok&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 text-white">
+<p class="font-label-lg text-sm uppercase tracking-widest opacity-80 mb-1">Qualidade Premium</p>
+<p class="font-headline-md text-lg">Carnes Selecionadas e Pizzas artesanais</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Highlights Section -->
+<section class="py-20 md:py-32 bg-white" id="cardapio">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-brand-charcoal">Destaques do Dia</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Preparados com o rigor gaúcho e a criatividade brasileira para surpreender o seu paladar.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Highlight Card 1 -->
+<div class="group bg-brand-beige p-8 rounded-2xl border border-brand-cream hover:border-primary/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+<div class="w-full h-48 mb-8 rounded-2xl overflow-hidden shadow-sm"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiwfLjdOZJCgv9qj0JT3gpx-ehZi4TJrTqLJntBCY8M1qOQ9_5W-42E-I-T0DMOgJpsaLZQ1Ynd9ot-kj1u965QMLvGfx97p49pKuZBtFlQ-ROmrUDaLDWr7Y3UYFYsdXRPu-ReRjczJ_AaBkVEMXjY6SdY5AGcQeg473eV0tDemHEiUQrOCnkvoQGg3ubLe6D-ERJZxaays-zC3Q8IG2k6FmggQB32Jj7UUkWMuYQRZAIdzfhS_01LoDFUJ-k4_EadCsWo4QYKz_K" alt="Churrasco no Espeto" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"></div>
+<h3 class="font-headline-md text-headline-md text-brand-charcoal mb-4">Churrasco no Espeto</h3>
+<p class="font-body-md text-on-surface-variant">Cortes nobres preparados por mestres churrasqueiros, garantindo a suculência e o tempero autêntico da tradição gaúcha.</p>
+</div>
+<!-- Highlight Card 2 -->
+<div class="group bg-brand-beige p-8 rounded-2xl border border-brand-cream hover:border-primary/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+<div class="w-full h-48 mb-8 rounded-2xl overflow-hidden shadow-sm"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7b6cwczRUq0dmahlfwB3b6nDDoyIWabHyqVTDl6eO-sG5oHPq_2MJEFkiWZqT3CT-3pckocrkAElNOrL5d4GJB5lNz5uqUNwzAFp_YtnwOVNGW3nmxIuW2CD0GM-NpP6bXf5Q3KgFWE7Cj7j8EkOCSiTzAf-ka3aeUNfu7fvOA5icmg-IXGX_qG5zfsA5vb4PB1Xt4vDXO_d4VlGtivDkv397rgWQs_Lr3vH-Fz68GK2AxxIFXYe-6KDpr8ozWZE8iTkZcn2ABPY3" alt="Pizzas Artesanais" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"></div>
+<h3 class="font-headline-md text-headline-md text-brand-charcoal mb-4">Pizzas Artesanais</h3>
+<p class="font-body-md text-on-surface-variant">Massa de fermentação lenta e ingredientes premium, assadas na temperatura ideal para uma borda crocante e sabor marcante.</p>
+</div>
+<!-- Highlight Card 3 -->
+<div class="group bg-brand-beige p-8 rounded-2xl border border-brand-cream hover:border-primary/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+<div class="w-full h-48 mb-8 rounded-2xl overflow-hidden shadow-sm"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU0kLGsZSZJX-rbdI9Zz8Q68EzGDUkA5xNiJV40jxMhqNmaOKUZhcjkbDq9H8c3_CzkhjJ1V7NxMe7PGMvV00U97-uwgCFK3lnJxuVtXIGUjpF5LXGUUzTx-rBKyzxSCkBV882SiEaUrPMfJwqsLh6Zp6OU87pXRbzfaME46xmJUSFQm33kpYX8Br60QgLsILWIOnWFWIx8olv47a-JFbGyWSe7Ob9ZMAIFOsoFJFj-vHOwnnqYWPP9ipjZ65ydXwnVC3IbNgA3VY2" alt="Ambiente Aconchegante" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"></div>
+<h3 class="font-headline-md text-headline-md text-brand-charcoal mb-4">Ambiente Aconchegante</h3>
+<p class="font-body-md text-on-surface-variant">Espaço planejado para proporcionar conforto e sofisticação, ideal para momentos memoráveis com amigos e família.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-20 md:py-32 bg-brand-beige overflow-hidden" id="depoimentos">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+<div class="space-y-4">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-brand-charcoal">O que nossos clientes dizem</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A satisfação de quem vive a experiência Gaúcha todos os dias.</p>
+</div>
+<div class="flex gap-4">
+<button class="p-3 rounded-full border border-outline hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-3 rounded-full border border-outline hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="flex gap-8 overflow-x-auto pb-8 snap-x no-scrollbar">
+<!-- Review 1 -->
+<div class="min-w-[320px] md:min-w-[400px] bg-white p-8 rounded-2xl shadow-sm snap-start border border-brand-cream">
+<div class="flex gap-1 text-yellow-500 mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-brand-charcoal italic mb-8">"Lugar excelente, atendimento de primeira e as carnes são simplesmente maravilhosas. A picanha estava no ponto perfeito!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center font-bold text-primary">CF</div>
+<div>
+<h4 class="font-label-lg text-brand-charcoal">Cairo Felipe</h4>
+<p class="text-xs text-on-surface-variant">Cliente VIP</p>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="min-w-[320px] md:min-w-[400px] bg-white p-8 rounded-2xl shadow-sm snap-start border border-brand-cream">
+<div class="flex gap-1 text-yellow-500 mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-brand-charcoal italic mb-8">"Ambiente super agradável para família. As pizzas têm uma massa incrível e o recheio é bem generoso. Voltarei sempre!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center font-bold text-primary">TA</div>
+<div>
+<h4 class="font-label-lg text-brand-charcoal">Taísa Araújo</h4>
+<p class="text-xs text-on-surface-variant">Cliente Frequentador</p>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="min-w-[320px] md:min-w-[400px] bg-white p-8 rounded-2xl shadow-sm snap-start border border-brand-cream">
+<div class="flex gap-1 text-yellow-500 mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-brand-charcoal italic mb-8">"Fizemos um evento corporativo e foi impecável. Equipe muito atenciosa e ágil. Recomendo para quem busca qualidade."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center font-bold text-primary">RB</div>
+<div>
+<h4 class="font-label-lg text-brand-charcoal">Rafael Borborema</h4>
+<p class="text-xs text-on-surface-variant">Empresário</p>
+</div>
+</div>
+</div>
+</div><div class="mt-12 flex justify-center">
+    <a href="https://g.page/r/CbGxc_-31vMrEBM/review" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl border-2 border-primary text-primary font-label-lg text-label-lg hover:bg-primary hover:text-white transition-all active:scale-95 shadow-sm">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"></path>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"></path>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.66l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"></path>
+        </svg>
+        Avaliar no Google
+    </a>
+</div>
+</div>
+</section>
+<!-- Reservation Section -->
+<section class="py-20 md:py-32 bg-brand-charcoal text-white relative overflow-hidden" id="reserva">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[400px]">restaurant</span>
+</div>
+<div class="max-w-[800px] mx-auto px-margin-mobile relative z-10">
+<div class="text-center mb-12 space-y-4">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg">Garanta sua Mesa</h2>
+<p class="text-brand-cream/80 font-body-lg">Preencha os dados abaixo e entraremos em contato para confirmar sua reserva via WhatsApp.</p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white/5 backdrop-blur-md p-8 md:p-12 rounded-[2rem] border border-white/10 shadow-2xl" id="reservation-form">
+<div class="space-y-2">
+<label class="font-label-lg block opacity-80">Nome Completo</label>
+<input class="w-full bg-white/10 border-white/20 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary text-white placeholder:text-white/30 transition-all" name="name" placeholder="Ex: João Silva" required="" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-lg block opacity-80">WhatsApp</label>
+<input class="w-full bg-white/10 border-white/20 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary text-white placeholder:text-white/30 transition-all" name="phone" placeholder="(87) 99999-9999" required="" type="tel">
+</div>
+<div class="space-y-2">
+<label class="font-label-lg block opacity-80">Data</label>
+<input class="w-full bg-white/10 border-white/20 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary text-white transition-all" name="date" required="" type="date">
+</div>
+<div class="space-y-2">
+<label class="font-label-lg block opacity-80">Horário</label>
+<input class="w-full bg-white/10 border-white/20 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary text-white transition-all" name="time" required="" type="time">
+</div>
+<div class="space-y-2">
+<label class="font-label-lg block opacity-80">Tipo de Evento</label>
+<select class="w-full bg-white/10 border-white/20 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary text-white transition-all" name="event" required="">
+<option class="text-brand-charcoal" value="Familiar">Familiar</option>
+<option class="text-brand-charcoal" value="Empresarial">Empresarial</option>
+<option class="text-brand-charcoal" value="Aniversário">Aniversário</option>
+<option class="text-brand-charcoal" value="Romântico">Romântico</option>
+<option class="text-brand-charcoal" value="Outros">Outros</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-lg block opacity-80">Qtd. de Pessoas</label>
+<input class="w-full bg-white/10 border-white/20 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary text-white placeholder:text-white/30 transition-all" min="1" name="quantity" placeholder="Ex: 4" required="" type="number">
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="font-label-lg block opacity-80">Observações (Opcional)</label>
+<textarea class="w-full bg-white/10 border-white/20 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary text-white placeholder:text-white/30 transition-all" name="obs" placeholder="Restrições alimentares, preferência de mesa..." rows="3"></textarea>
+</div>
+<div class="md:col-span-2 pt-4">
+<button class="w-full bg-primary py-4 rounded-xl font-display-lg text-headline-md text-white hover:bg-primary-container transition-all active:scale-95 shadow-xl shadow-primary/20 flex items-center justify-center gap-3" type="submit">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+                            Confirmar via WhatsApp
+                        </button>
+</div>
+</form>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-20 md:py-32 bg-white" id="contato">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid md:grid-cols-2 gap-16 items-start">
+<div class="space-y-12">
+<div class="space-y-4">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-brand-charcoal">Estamos te esperando</h2>
+<p class="font-body-lg text-on-surface-variant">Visite-nos ou peça no conforto da sua casa.</p>
+</div>
+<div class="space-y-8">
+<a class="flex items-center gap-6 group" href="tel:+5587981374668">
+<div class="w-14 h-14 bg-brand-cream rounded-2xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">phone</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Telefone</p>
+<p class="font-headline-md text-brand-charcoal">(87) 98137-4668</p>
+</div>
+</a>
+<a class="flex items-center gap-6 group" href="https://instagram.com/gaucha_churrascaria_pizzaria" target="_blank">
+<div class="w-14 h-14 bg-brand-cream rounded-2xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">photo_camera</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Instagram</p>
+<p class="font-headline-md text-brand-charcoal">@gaucha_churrascaria_pizzaria</p>
+</div>
+</a>
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-brand-cream rounded-2xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">location_on</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Localização</p>
+<p class="font-headline-md text-brand-charcoal leading-tight">Av. Mário Rodrigues Coelho, Petrolina - PE</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-brand-cream rounded-2xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">schedule</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Horário de Funcionamento</p>
+<p class="font-headline-md text-brand-charcoal leading-tight">Terça a Domingo: 11:00 às 23:00</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h-[400px] md:h-full min-h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl relative border-8 border-brand-beige">
+<div class="w-full h-full bg-cover bg-center" data-alt="A modern stylized map visualization of Petrolina, Brazil, focusing on the Av. Mário Rodrigues Coelho area. The map uses a clean light mode color scheme with cream and beige backgrounds, highlighted with deep red pin markers indicating the restaurant's premium location. Elegant typography and minimalist design elements make it visually cohesive with a high-end corporate food industry identity." data-location="Petrolina, Pernambuco, Brazil" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDoUnIRR9naGp3X8Jp6uUJpoKiY5WGGEDdPxbaoxhVANg7vIRGQ9MslCH4m2lb68DqG3vjsFGIJlo4IMcz5MsEW8QGXsvZIj9e9I5oMqZxVMr_XVP3KwVWTX5RP0DShbWthp0eD8mg8qnXkq8lmuIFk88HG5VtWhI65gmfe5dM1uwvEGlBqTnMxKFQ6fuKss5sVnaXk7XxtP_PuCKDIX9409CrAQxdvyfmsWiKLkLRveTDtPZb-nHJ5cYclUICBpcYan7F-uO6KTYLa')"></div>
+<a class="absolute bottom-6 right-6 bg-white text-primary px-6 py-3 rounded-xl font-bold flex items-center gap-2 shadow-lg hover:bg-brand-cream transition-all" href="https://maps.google.com" target="_blank">
+                        Ver no Google Maps
+                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant py-16">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-12">
+<a class="flex items-center gap-4" href="#">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwILTpgcDaOy9KvB9NbYxdnRbgzrqrYNbwLsSi76NpRXqClV89rxBAelbdHzgKz98w7WZLTSW3Lj1WQ8zLQX-bSx3MdcHeDV3E0B2MMLYbG-5JaNqtYnNKs4zbkEmhHZR6ogA-k-hBGSk7_XEGNzbKNNEu8tXdSH7HqyXjCBhRgx1kN6kj1NCGrTrGuv_LjXDkUQkO7x620crjrf5BZudDCxL_nqrGQU8L7sl2-mCtRUydowNmGw1EoZdA7Fd6Q1PRriUYrIb1p5Xc">
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-primary">Gaúcha Churrascaria e Pizzaria</span>
+
+</div>
+</a>
+<div class="flex flex-wrap justify-center gap-x-12 gap-y-4">
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#inicio">Início</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#cardapio">Cardápio</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#reserva">Reserva</a>
+
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="https://app.rvpedidos.com.br/pizzaria_nossacasa?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio" target="_blank">Pedidos Online</a></div>
+
+</div>
+<div class="pt-12 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-body-md text-on-surface-variant text-center md:text-left">© 2026 Churrascaria Gaúcha e Pizzaria. Todos os direitos reservados.</p>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-sm">local_fire_department</span>
+                    Feito com tradição
+                </div>
+</div>
+</div>
+</footer>
+<!-- Scripts -->
+<script>
+        // Mobile Menu Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileNav = document.getElementById('mobile-nav');
+        const navDrawer = document.getElementById('nav-drawer');
+        const navOverlay = document.getElementById('nav-overlay');
+
+        function toggleMenu(isOpen) {
+            if (isOpen) {
+                mobileNav.classList.remove('invisible');
+                setTimeout(() => {
+                    navDrawer.classList.remove('-translate-x-full');
+                    navOverlay.classList.add('opacity-100');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            } else {
+                navDrawer.classList.add('-translate-x-full');
+                navOverlay.classList.remove('opacity-100');
+                setTimeout(() => {
+                    mobileNav.classList.add('invisible');
+                }, 300);
+                document.body.style.overflow = '';
+            }
+        }
+
+        menuToggle.addEventListener('click', () => toggleMenu(true));
+        menuClose.addEventListener('click', () => toggleMenu(false));
+        navOverlay.addEventListener('click', () => toggleMenu(false));
+
+        // Form Logic
+        const reservationForm = document.getElementById('reservation-form');
+        reservationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(reservationForm);
+            const data = Object.fromEntries(formData.entries());
+            
+            const message = `Olá! Gostaria de solicitar uma reserva:%0A%0A` +
+                `*Nome:* ${data.name}%0A` +
+                `*WhatsApp:* ${data.phone}%0A` +
+                `*Data:* ${data.date}%0A` +
+                `*Horário:* ${data.time}%0A` +
+                `*Evento:* ${data.event}%0A` +
+                `*Pessoas:* ${data.quantity}%0A` +
+                `*Obs:* ${data.obs || 'Nenhuma'}`;
+            
+            window.open(`http://wa.me/5587981374668?text=${message}`, '_blank');
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-0', 'shadow-md');
+                header.querySelector('nav').classList.replace('h-20', 'h-16');
+            } else {
+                header.classList.remove('py-0', 'shadow-md');
+                header.querySelector('nav').classList.replace('h-16', 'h-20');
+            }
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('#nav-drawer a').forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
+        });
+    </script>
+
+
+</body></html>
